@@ -13,6 +13,22 @@
     --section-spacing: 6rem;
     --border-radius: 8px;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.container-custom {
+  overflow-x: hidden;
+}
 
 * {
     margin: 0;
