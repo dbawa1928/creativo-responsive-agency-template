@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Creativo Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/hero.png">
+    <style>
+        /* Documentation specific styles */
+        .docs-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .docs-hero {
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+        }
+        
+        .docs-sidebar {
+            position: sticky;
+            top: 100px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            padding-right: 2rem;
+        }
+        
+        .docs-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .docs-nav li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .docs-nav a {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius);
+            color: var(--color-gray-600);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .docs-nav a:hover,
+        .docs-nav a.active {
+            background: var(--color-gray-100);
+            color: var(--color-primary);
+        }
+        
+        .docs-section {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--color-gray-300);
+        }
+        
+        .docs-section:last-child {
+            border-bottom: none;
+        }
+        
+        .code-block {
+            background: var(--color-gray-100);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+        }
+        
+        .file-structure {
+            background: var(--color-gray-100);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .file-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--color-gray-300);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .file-item:last-child {
+            border-bottom: none;
+        }
+        
+        .file-folder {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--border-radius);
+            display: inline-block;
+            margin-right: 1rem;
+            vertical-align: middle;
+            border: 1px solid var(--color-gray-300);
+        }
+        
+        @media (max-width: 992px) {
+            .docs-sidebar {
+                position: static;
+                margin-bottom: 3rem;
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body class="docs-page">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container-custom">
+            <a href="index.html" class="nav-logo">Creati<span>vo</span></a>
+            <button class="mobile-toggle" aria-label="Menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="documentation.html" class="active">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="docs-hero">
+            <div class="docs-container">
+                <h1 class="js-scroll">Creativo Template Documentation</h1>
+                <p class="lead js-scroll" style="font-size: 1.25rem; color: var(--color-gray-600);">Complete guide to customizing and using the Creativo premium HTML template.</p>
+            </div>
+        </section>
+
+        <!-- Documentation Content -->
+        <section class="docs-content" style="padding-bottom: 6rem;">
+            <div class="docs-container">
+                <div class="row">
+                    <!-- Sidebar Navigation -->
+                    <div class="col-lg-3">
+                        <nav class="docs-sidebar js-scroll">
+                            <ul class="docs-nav">
+                                <li><a href="#introduction" class="active">Introduction</a></li>
+                                <li><a href="#file-structure">File Structure</a></li>
+                                <li><a href="#editing-content">Editing Content</a></li>
+                                <li><a href="#changing-colors">Changing Colors</a></li>
+                                <li><a href="#customizing-images">Customizing Images</a></li>
+                                <li><a href="#animations">Animations</a></li>
+                                <li><a href="#responsive">Responsive Design</a></li>
+                                <li><a href="#support">Support</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="col-lg-9">
+                        <!-- Introduction -->
+                        <section id="introduction" class="docs-section js-scroll">
+                            <h2>Introduction</h2>
+                            <p>Thank you for purchasing the Creativo Premium HTML Template. This documentation will help you understand the template structure and guide you through customization.</p>
+                            <p>Creativo is a modern, multi-page template designed for digital agencies and creative studios. It features clean design, subtle animations, and full responsiveness.</p>
+                            
+                            <div class="alert" style="background: var(--color-gray-100); padding: 1.5rem; border-radius: var(--border-radius); margin: 1.5rem 0;">
+                                <h4>📁 Template Features</h4>
+                                <ul style="margin: 1rem 0 0; padding-left: 1.5rem;">
+                                    <li>8 HTML Pages (Home, About, Services, Portfolio, Case Study, Contact, 404, Documentation)</li>
+                                    <li>Built with Bootstrap 5 Grid System</li>
+                                    <li>GSAP + ScrollTrigger Animations</li>
+                                    <li>Fully Responsive Design</li>
+                                    <li>Clean, Modern UI</li>
+                                    <li>Professional Business Content</li>
+                                    <li>Easy to Customize</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- File Structure -->
+                        <section id="file-structure" class="docs-section js-scroll">
+                            <h2>File Structure</h2>
+                            <p>Here's the complete file structure of the Creativo template:</p>
+                            
+                            <div class="file-structure">
+                                <div class="file-item"><span class="file-folder">creativo-template/</span></div>
+                                <div class="file-item">├── <span class="file-folder">assets/</span></div>
+                                <div class="file-item">│   ├── <span class="file-folder">css/</span></div>
+                                <div class="file-item">│   │   └── style.css <em>(main stylesheet)</em></div>
+                                <div class="file-item">│   ├── <span class="file-folder">js/</span></div>
+                                <div class="file-item">│   │   └── main.js <em>(all JavaScript functionality)</em></div>
+                                <div class="file-item">│   └── <span class="file-folder">images/</span></div>
+                                <div class="file-item">│       ├── hero.png</div>
+                                <div class="file-item">│       ├── portfolio-1.png</div>
+                                <div class="file-item">│       ├── portfolio-2.png</div>
+                                <div class="file-item">│       ├── portfolio-3.png</div>
+                                <div class="file-item">│       ├── service-design.png</div>
+                                <div class="file-item">│       ├── service-development.png</div>
+                                <div class="file-item">│       ├── service-branding.png</div>
+                                <div class="file-item">│       ├── team-1.png</div>
+                                <div class="file-item">│       ├── team-2.png</div>
+                                <div class="file-item">│       └── team-3.png</div>
+                                <div class="file-item">├── index.html <em>(homepage)</em></div>
+                                <div class="file-item">├── about.html</div>
+                                <div class="file-item">├── services.html</div>
+                                <div class="file-item">├── portfolio.html</div>
+                                <div class="file-item">├── case-study.html</div>
+                                <div class="file-item">├── contact.html</div>
+                                <div class="file-item">├── 404.html</div>
+                                <div class="file-item">├── documentation.html <em>(this file)</em></div>
+                                <div class="file-item">└── favicon.ico</div>
+                            </div>
+                            
+                            <p><strong>Important:</strong> Keep this structure intact to ensure all file paths work correctly.</p>
+                        </section>
+
+                        <!-- Editing Content -->
+                        <section id="editing-content" class="docs-section js-scroll">
+                            <h2>Editing Content</h2>
+                            <p>To edit text content, simply open any HTML file in a code editor (like VS Code, Sublime Text, or Atom) and modify the text between the HTML tags.</p>
+                            
+                            <h4>Example: Changing a Heading</h4>
+                            <div class="code-block">
+                                &lt;!-- Original --&gt;<br>
+                                &lt;h1&gt;We build digital experiences that drive growth.&lt;/h1&gt;<br><br>
+                                &lt;!-- Modified --&gt;<br>
+                                &lt;h1&gt;Your New Agency Headline Here&lt;/h1&gt;
+                            </div>
+                            
+                            <h4>Example: Changing Paragraph Text</h4>
+                            <div class="code-block">
+                                &lt;p class="lead"&gt;Creativo is a strategic digital agency...&lt;/p&gt;<br><br>
+                                &lt;p class="lead"&gt;Your agency description goes here...&lt;/p&gt;
+                            </div>
+                            
+                            <h4>Tips:</h4>
+                            <ul>
+                                <li>Keep paragraphs concise for better readability</li>
+                                <li>Maintain the existing CSS classes (like <code>lead</code>, <code>btn</code>, <code>js-scroll</code>)</li>
+                                <li>Update all pages with your new content</li>
+                            </ul>
+                        </section>
+
+                        <!-- Changing Colors -->
+                        <section id="changing-colors" class="docs-section js-scroll">
+                            <h2>Changing Colors</h2>
+                            <p>The template uses CSS variables for easy color customization. All colors are defined in the <code>:root</code> section of <code>style.css</code>.</p>
+                            
+                            <div class="code-block">
+                                :root {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-primary: #4f46e5; /* Main brand color */<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-primary-dark: #4338ca;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-dark: #111827; /* Text color */<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-gray-800: #1f2937;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-gray-600: #4b5563;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-gray-300: #d1d5db;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-gray-100: #f9fafb;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;--color-white: #ffffff;<br>
+                                }
+                            </div>
+                            
+                            <h4>Current Color Scheme:</h4>
+                            <div style="margin: 1.5rem 0;">
+                                <div class="color-swatch" style="background: #4f46e5;"></div> Primary (#4f46e5)<br>
+                                <div class="color-swatch" style="background: #4338ca;"></div> Primary Dark (#4338ca)<br>
+                                <div class="color-swatch" style="background: #111827;"></div> Text (#111827)<br>
+                                <div class="color-swatch" style="background: #f9fafb;"></div> Light Gray (#f9fafb)
+                            </div>
+                            
+                            <p>To change the primary color, simply update the <code>--color-primary</code> and <code>--color-primary-dark</code> values with your preferred colors.</p>
+                        </section>
+
+                        <!-- Customizing Images -->
+                        <section id="customizing-images" class="docs-section js-scroll">
+                            <h2>Customizing Images</h2>
+                            <p>Replace the existing images with your own by following these steps:</p>
+                            
+                            <ol>
+                                <li>Prepare your images (optimize for web, recommended size: 1200x800px for portfolio images)</li>
+                                <li>Replace the files in the <code>assets/images/</code> folder</li>
+                                <li>Keep the same file names, OR update the HTML to reference your new file names</li>
+                            </ol>
+                            
+                            <h4>Image Replacement Example:</h4>
+                            <div class="code-block">
+                                &lt;!-- Original --&gt;<br>
+                                &lt;img src="./assets/images/hero.png" alt="Creative workspace"&gt;<br><br>
+                                &lt;!-- Updated with new image --&gt;<br>
+                                &lt;img src="./assets/images/my-new-hero.jpg" alt="Your agency workspace"&gt;
+                            </div>
+                            
+                            <h4>Recommended Image Specifications:</h4>
+                            <ul>
+                                <li><strong>Hero images:</strong> 1200x800px, web-optimized</li>
+                                <li><strong>Portfolio images:</strong> 800x600px, consistent aspect ratio</li>
+                                <li><strong>Team photos:</strong> 400x400px, square format</li>
+                                <li><strong>Format:</strong> JPEG or PNG (PNG for transparency)</li>
+                                <li><strong>File size:</strong> Keep under 200KB per image</li>
+                            </ul>
+                        </section>
+
+                        <!-- Animations -->
+                        <section id="animations" class="docs-section js-scroll">
+                            <h2>Animations</h2>
+                            <p>The template uses GSAP (GreenSock Animation Platform) with ScrollTrigger for subtle, professional animations.</p>
+                            
+                            <h4>How Animations Work:</h4>
+                            <p>Elements with the class <code>js-scroll</code> will fade up when they enter the viewport. The animations are controlled in <code>assets/js/main.js</code>.</p>
+                            
+                            <div class="code-block">
+                                // Scroll reveal animation setup<br>
+                                const scrollElements = document.querySelectorAll('.js-scroll');<br><br>
+                                
+                                // Elements fade up when 85% visible<br>
+                                const elementInView = (el) => {<br>
+                                &nbsp;&nbsp;const elementTop = el.getBoundingClientRect().top;<br>
+                                &nbsp;&nbsp;return (<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;elementTop &lt;= (window.innerHeight * 0.85)<br>
+                                &nbsp;&nbsp;);<br>
+                                };
+                            </div>
+                            
+                            <h4>To Disable Animations:</h4>
+                            <p>Remove the <code>js-scroll</code> class from elements, or comment out the animation code in <code>main.js</code>.</p>
+                            
+                            <h4>To Add Animation to New Elements:</h4>
+                            <p>Simply add the <code>js-scroll</code> class to any element you want to animate on scroll.</p>
+                            
+                            <div class="code-block">
+                                &lt;!-- This element will fade up on scroll --&gt;<br>
+                                &lt;div class="js-scroll"&gt;<br>
+                                &nbsp;&nbsp;&lt;h3&gt;Your New Section&lt;/h3&gt;<br>
+                                &nbsp;&nbsp;&lt;p&gt;This content will animate into view.&lt;/p&gt;<br>
+                                &lt;/div&gt;
+                            </div>
+                        </section>
+
+                        <!-- Responsive Design -->
+                        <section id="responsive" class="docs-section js-scroll">
+                            <h2>Responsive Design</h2>
+                            <p>The template is fully responsive and uses:</p>
+                            <ul>
+                                <li>Bootstrap 5 Grid System (for layout only)</li>
+                                <li>CSS Media Queries (in <code>style.css</code>)</li>
+                                <li>Mobile-first approach</li>
+                            </ul>
+                            
+                            <h4>Breakpoints Used:</h4>
+                            <div class="code-block">
+                                /* Large devices (desktops, 992px and up) */<br>
+                                @media (max-width: 992px) { ... }<br><br>
+                                
+                                /* Medium devices (tablets, 768px and up) */<br>
+                                @media (max-width: 768px) { ... }<br><br>
+                                
+                                /* Small devices (phones, 576px and up) */<br>
+                                @media (max-width: 576px) { ... }
+                            </div>
+                            
+                            <h4>Testing Responsiveness:</h4>
+                            <ul>
+                                <li>Resize your browser window to test different screen sizes</li>
+                                <li>Use browser developer tools (F12) to simulate mobile devices</li>
+                                <li>Test on actual mobile devices when possible</li>
+                            </ul>
+                        </section>
+
+                        <!-- Support -->
+                        <section id="support" class="docs-section js-scroll">
+                            <h2>Support</h2>
+                            <p>If you encounter any issues or have questions about customizing the template:</p>
+                            
+                            <div class="alert" style="background: var(--color-gray-100); padding: 1.5rem; border-radius: var(--border-radius);">
+                                <h4>🛠 Common Customization Tasks</h4>
+                                <ul style="margin: 1rem 0 0; padding-left: 1.5rem;">
+                                    <li><strong>Change logo:</strong> Edit the <code>&lt;a class="nav-logo"&gt;</code> in all HTML files</li>
+                                    <li><strong>Update footer:</strong> Edit the footer section in all HTML files</li>
+                                    <li><strong>Add new page:</strong> Duplicate an existing page and modify the content</li>
+                                    <li><strong>Change font:</strong> Update the Google Font link in the <code>&lt;head&gt;</code></li>
+                                    <li><strong>Add new section:</strong> Follow the existing HTML/CSS patterns</li>
+                                </ul>
+                            </div>
+                            
+                            <h4>Before Requesting Support:</h4>
+                            <ul>
+                                <li>Check this documentation for answers</li>
+                                <li>Verify all file paths are correct</li>
+                                <li>Clear your browser cache after making changes</li>
+                                <li>Check browser console for JavaScript errors (F12)</li>
+                            </ul>
+                            
+                            <p><strong>Note:</strong> As this is a frontend template, we cannot provide support for backend integration or server-side programming.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">Creati<span>vo</span></a>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="documentation.html">Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Creativo Digital Agency. All rights reserved. A premium HTML template.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- Documentation Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for documentation navigation
+            const navLinks = document.querySelectorAll('.docs-nav a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update active state
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Scroll to section
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active nav based on scroll position
+            const sections = document.querySelectorAll('.docs-section');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Code block copy functionality
+            const codeBlocks = document.querySelectorAll('.code-block');
+            codeBlocks.forEach(block => {
+                block.addEventListener('click', function() {
+                    const text = this.innerText;
+                    navigator.clipboard.writeText(text).then(() => {
+                        // Show copied message
+                        const original = this.innerHTML;
+                        this.innerHTML = '✅ Code copied to clipboard!';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = original;
+                        }, 1500);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

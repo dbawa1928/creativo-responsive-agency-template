@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Creativo Digital Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/hero.png">
+</head>
+<body class="contact-page">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container-custom">
+            <a href="index.html" class="nav-logo">Creati<span>vo</span></a>
+            <button class="mobile-toggle" aria-label="Menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active btn btn-primary">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="contact-hero" style="padding-top: 10rem; padding-bottom: 6rem;">
+            <div class="container-custom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="js-scroll">Let's build something great together.</h1>
+                        <p class="lead js-scroll" style="font-size: 1.25rem; color: var(--color-gray-600);">Tell us about your project, and we'll get back to you with a plan tailored to your goals and timeline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section" style="padding-bottom: 6rem;">
+            <div class="container-custom">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="contact-info js-scroll">
+                            <h2>Start Your Project</h2>
+                            <p>We typically respond within 24 hours during business days. The more details you provide about your project, the better we can prepare for our initial discussion.</p>
+                            
+                            <div class="contact-details" style="margin-top: 3rem;">
+                                <h4>What to expect:</h4>
+                                <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+                                    <li style="padding: 0.5rem 0; display: flex; align-items: flex-start;">
+                                        <span style="color: var(--color-primary); font-weight: bold; margin-right: 0.75rem;">✓</span>
+                                        <span>Initial consultation call to understand your needs</span>
+                                    </li>
+                                    <li style="padding: 0.5rem 0; display: flex; align-items: flex-start;">
+                                        <span style="color: var(--color-primary); font-weight: bold; margin-right: 0.75rem;">✓</span>
+                                        <span>Project scope and timeline assessment</span>
+                                    </li>
+                                    <li style="padding: 0.5rem 0; display: flex; align-items: flex-start;">
+                                        <span style="color: var(--color-primary); font-weight: bold; margin-right: 0.75rem;">✓</span>
+                                        <span>Preliminary strategy and approach discussion</span>
+                                    </li>
+                                    <li style="padding: 0.5rem 0; display: flex; align-items: flex-start;">
+                                        <span style="color: var(--color-primary); font-weight: bold; margin-right: 0.75rem;">✓</span>
+                                        <span>Transparent pricing and next steps</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="form-note" style="margin-top: 3rem; padding: 1.5rem; background: var(--color-gray-100); border-radius: var(--border-radius);">
+                                <h4>Privacy Notice</h4>
+                                <p style="font-size: 0.875rem;">We respect your privacy and will only use your information to respond to your inquiry. We never share your data with third parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <form class="contact-form js-scroll" id="contactForm" style="border-radius: var(--border-radius); padding: 3rem; background: var(--color-white); box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name *</label>
+                                <input type="text" id="name" name="name" required style="width: 100%; padding: 1rem; border: 1px solid var(--color-gray-300); border-radius: var(--border-radius); font-family: 'Inter', sans-serif; font-size: 1rem; transition: var(--transition);">
+                                <div class="input-focus-line" style="height: 2px; background: var(--color-primary); width: 0; transition: width 0.3s ease;"></div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address *</label>
+                                <input type="email" id="email" name="email" required style="width: 100%; padding: 1rem; border: 1px solid var(--color-gray-300); border-radius: var(--border-radius); font-family: 'Inter', sans-serif; font-size: 1rem; transition: var(--transition);">
+                                <div class="input-focus-line" style="height: 2px; background: var(--color-primary); width: 0; transition: width 0.3s ease;"></div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="company" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Company</label>
+                                <input type="text" id="company" name="company" style="width: 100%; padding: 1rem; border: 1px solid var(--color-gray-300); border-radius: var(--border-radius); font-family: 'Inter', sans-serif; font-size: 1rem; transition: var(--transition);">
+                                <div class="input-focus-line" style="height: 2px; background: var(--color-primary); width: 0; transition: width 0.3s ease;"></div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 2rem;">
+                                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Project Details *</label>
+                                <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 1rem; border: 1px solid var(--color-gray-300); border-radius: var(--border-radius); font-family: 'Inter', sans-serif; font-size: 1rem; resize: vertical; transition: var(--transition);"></textarea>
+                                <div class="input-focus-line" style="height: 2px; background: var(--color-primary); width: 0; transition: width 0.3s ease;"></div>
+                                <small style="display: block; margin-top: 0.5rem; color: var(--color-gray-600);">Please include project goals, timeline, budget range, and any specific requirements.</small>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 2rem;">
+                                <label for="service" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Service Interest</label>
+                                <select id="service" name="service" style="width: 100%; padding: 1rem; border: 1px solid var(--color-gray-300); border-radius: var(--border-radius); font-family: 'Inter', sans-serif; font-size: 1rem; background: var(--color-white);">
+                                    <option value="">Select a service</option>
+                                    <option value="design">Product Design</option>
+                                    <option value="development">Web Development</option>
+                                    <option value="branding">Brand Identity</option>
+                                    <option value="multiple">Multiple Services</option>
+                                    <option value="not-sure">Not Sure / Need Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100" style="padding: 1.25rem; font-size: 1.125rem;">Send Message</button>
+                            
+                            <p style="text-align: center; margin-top: 1rem; color: var(--color-gray-600); font-size: 0.875rem;">All fields marked with * are required.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="contact-process" style="background-color: var(--color-gray-100);">
+            <div class="container-custom">
+                <div class="text-center mb-6">
+                    <h2 class="js-scroll">Our Process</h2>
+                    <p class="js-scroll" style="max-width: 700px; margin: 0 auto;">From initial contact to project delivery, here's how we work with our clients.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="process-step js-scroll text-center" style="padding: 2rem;">
+                            <div class="step-number" style="width: 60px; height: 60px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem;">1</div>
+                            <h4>Discovery</h4>
+                            <p>We start with a deep dive into your business, goals, and challenges to understand the full context.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="process-step js-scroll text-center" style="padding: 2rem;">
+                            <div class="step-number" style="width: 60px; height: 60px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem;">2</div>
+                            <h4>Strategy</h4>
+                            <p>We develop a tailored approach with clear milestones, deliverables, and success metrics.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="process-step js-scroll text-center" style="padding: 2rem;">
+                            <div class="step-number" style="width: 60px; height: 60px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem;">3</div>
+                            <h4>Execution</h4>
+                            <p>We deliver exceptional work through collaborative, transparent, and iterative development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">Creati<span>vo</span></a>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="documentation.html">Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Creativo Digital Agency. All rights reserved. A premium HTML template.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- Contact Form Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form input focus effects
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                const focusLine = input.parentElement.querySelector('.input-focus-line');
+                
+                input.addEventListener('focus', () => {
+                    if (focusLine) {
+                        gsap.to(focusLine, {
+                            width: '100%',
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    }
+                });
+                
+                input.addEventListener('blur', () => {
+                    if (focusLine && !input.value) {
+                        gsap.to(focusLine, {
+                            width: '0%',
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    }
+                });
+            });
+            
+            // Form submission animation
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    // Loading animation
+                    gsap.to(submitBtn, {
+                        backgroundColor: '#10b981',
+                        duration: 0.3,
+                        onStart: () => {
+                            submitBtn.textContent = 'Sending...';
+                            submitBtn.disabled = true;
+                        }
+                    });
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        gsap.to(submitBtn, {
+                            backgroundColor: '#059669',
+                            duration: 0.3,
+                            onComplete: () => {
+                                submitBtn.textContent = 'Message Sent!';
+                                submitBtn.style.backgroundColor = 'var(--color-primary)';
+                                
+                                // Reset form
+                                setTimeout(() => {
+                                    form.reset();
+                                    submitBtn.textContent = originalText;
+                                    submitBtn.disabled = false;
+                                    
+                                    // Reset focus lines
+                                    document.querySelectorAll('.input-focus-line').forEach(line => {
+                                        line.style.width = '0';
+                                    });
+                                }, 2000);
+                            }
+                        });
+                    }, 1500);
+                });
+            }
+            
+            // Process steps animation
+            const processSteps = document.querySelectorAll('.process-step');
+            processSteps.forEach((step, index) => {
+                gsap.fromTo(step.querySelector('.step-number'),
+                    { scale: 0, rotation: 180 },
+                    {
+                        scale: 1,
+                        rotation: 0,
+                        duration: 0.8,
+                        delay: index * 0.2,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+</html>

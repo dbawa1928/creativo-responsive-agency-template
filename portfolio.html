@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creativo Digital Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="portfolio-page">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container-custom">
+            <a href="index.html" class="nav-logo">Creati<span>vo</span></a>
+            <button class="mobile-toggle" aria-label="Menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="portfolio-hero" style="padding-top: 10rem; padding-bottom: 6rem;">
+            <div class="container-custom">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="js-scroll">Our Portfolio</h1>
+                        <p class="lead js-scroll" style="font-size: 1.25rem; color: var(--color-gray-600);">Selected projects that demonstrate our approach to solving complex business challenges through design and technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section class="portfolio-filter" style="padding-top: 0; padding-bottom: 2rem;">
+            <div class="container-custom">
+                <div class="filter-buttons js-scroll" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button class="filter-btn active" data-filter="all">All Work</button>
+                    <button class="filter-btn" data-filter="design">Product Design</button>
+                    <button class="filter-btn" data-filter="development">Web Development</button>
+                    <button class="filter-btn" data-filter="branding">Brand Identity</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="portfolio-grid" style="padding-top: 2rem;">
+            <div class="container-custom">
+                <div class="row g-4">
+                    <!-- Project 1 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="design">
+                        <a href="case-study.html" class="portfolio-card js-scroll" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="portfolio-image" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem;">
+                                <img src="./assets/images/portfolio-1.png" alt="Fintech Dashboard" class="img-fluid" style="transition: transform 0.5s ease;">
+                            </div>
+                            <h3>Fintech Dashboard</h3>
+                            <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">Product Design</p>
+                            <p>Data visualization dashboard for a financial technology startup, simplifying complex financial metrics.</p>
+                        </a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="development">
+                        <a href="case-study.html" class="portfolio-card js-scroll" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="portfolio-image" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem;">
+                                <img src="./assets/images/portfolio-2.png" alt="E-commerce Platform" class="img-fluid" style="transition: transform 0.5s ease;">
+                            </div>
+                            <h3>E-commerce Platform</h3>
+                            <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">Web Development</p>
+                            <p>Custom e-commerce solution with advanced filtering, inventory management, and seamless checkout.</p>
+                        </a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding">
+                        <a href="case-study.html" class="portfolio-card js-scroll" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="portfolio-image" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem;">
+                                <img src="./assets/images/portfolio-3.png" alt="Health Tech Brand" class="img-fluid" style="transition: transform 0.5s ease;">
+                            </div>
+                            <h3>Health Tech Brand</h3>
+                            <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">Brand Identity</p>
+                            <p>Complete rebranding for a healthcare technology company, establishing trust and modern appeal.</p>
+                        </a>
+                    </div>
+
+                    <!-- Project 4 (Reusing images with different context) -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="design">
+                        <a href="case-study.html" class="portfolio-card js-scroll" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="portfolio-image" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem;">
+                                <img src="./assets/images/service-design.png" alt="SaaS Product Design" class="img-fluid" style="transition: transform 0.5s ease;">
+                            </div>
+                            <h3>SaaS Product Design</h3>
+                            <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">Product Design</p>
+                            <p>End-to-end design for a B2B software platform, focusing on workflow optimization and user adoption.</p>
+                        </a>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="development">
+                        <a href="case-study.html" class="portfolio-card js-scroll" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="portfolio-image" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem;">
+                                <img src="./assets/images/service-development.png" alt="Travel Portal" class="img-fluid" style="transition: transform 0.5s ease;">
+                            </div>
+                            <h3>Travel Portal</h3>
+                            <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">Web Development</p>
+                            <p>Responsive travel booking portal with real-time availability, booking engine, and multi-currency support.</p>
+                        </a>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding">
+                        <a href="case-study.html" class="portfolio-card js-scroll" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="portfolio-image" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem;">
+                                <img src="./assets/images/service-branding.png" alt="Education Brand" class="img-fluid" style="transition: transform 0.5s ease;">
+                            </div>
+                            <h3>Education Brand</h3>
+                            <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">Brand Identity</p>
+                            <p>Brand strategy and visual identity for an edtech startup targeting professional development markets.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Showcase -->
+        <section class="project-showcase" style="background-color: var(--color-gray-100);">
+            <div class="container-custom">
+                <div class="text-center mb-6">
+                    <h2 class="js-scroll">Featured Project</h2>
+                    <p class="js-scroll" style="max-width: 700px; margin: 0 auto;">A closer look at one of our most impactful collaborations.</p>
+                </div>
+                
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="showcase-image js-scroll" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                            <img src="./assets/images/portfolio-1.png" alt="Featured Project" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="showcase-content js-scroll">
+                            <h3>Fintech Dashboard Platform</h3>
+                            <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 1rem;">Product Design • Web Development</p>
+                            <p>This project involved creating a comprehensive dashboard for a financial technology company that needed to present complex data in an accessible, actionable format.</p>
+                            <p>The solution reduced user task completion time by 40% and increased customer satisfaction scores by 35% within the first quarter of launch.</p>
+                            <a href="case-study.html" class="btn btn-primary mt-3">Read Full Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container-custom">
+                <div class="text-center">
+                    <h2 class="js-scroll">Have a project in mind?</h2>
+                    <p class="js-scroll mb-4">Let's discuss how we can bring your vision to life with our proven approach.</p>
+                    <a href="contact.html" class="btn btn-primary js-scroll">Start a Conversation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">Creati<span>vo</span></a>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="documentation.html">Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Creativo Digital Agency. All rights reserved. A premium HTML template.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- Portfolio Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter items
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            // Trigger animation
+                            gsap.fromTo(item, 
+                                { opacity: 0, y: 20 },
+                                { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
+                            );
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Enhanced hover effects
+            portfolioItems.forEach(item => {
+                const img = item.querySelector('img');
+                item.addEventListener('mouseenter', () => {
+                    gsap.to(img, {
+                        scale: 1.05,
+                        duration: 0.4,
+                        ease: "power2.out"
+                    });
+                });
+                item.addEventListener('mouseleave', () => {
+                    gsap.to(img, {
+                        scale: 1,
+                        duration: 0.4,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

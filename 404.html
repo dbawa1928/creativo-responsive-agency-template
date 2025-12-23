@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Creativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/hero.png">
+    <style>
+        /* Additional 404 specific styles */
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .error-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .error-number {
+            font-size: 8rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+            opacity: 0;
+        }
+        
+        .error-message {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .error-animation {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            position: relative;
+            opacity: 0;
+        }
+        
+        .error-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--color-gray-300);
+            border-radius: 50%;
+            border-top-color: var(--color-primary);
+        }
+        
+        .error-cross {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: var(--color-primary);
+            font-weight: 300;
+        }
+        
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 6rem;
+            }
+            
+            .error-animation {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body class="error-page">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container-custom">
+            <a href="index.html" class="nav-logo">Creati<span>vo</span></a>
+        </div>
+    </header>
+
+    <main class="error-content">
+        <div class="container-custom">
+            <div class="error-animation" id="errorAnim">
+                <div class="error-circle"></div>
+                <div class="error-cross">×</div>
+            </div>
+            
+            <h1 class="error-number" id="errorNumber">404</h1>
+            
+            <div class="error-message">
+                <h2 class="js-scroll">Page not found</h2>
+                <p class="js-scroll mb-4">The page you're looking for doesn't exist or has been moved. Please check the URL or return to our homepage.</p>
+                <div class="js-scroll">
+                    <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+                </div>
+                <p class="mt-4 js-scroll" style="font-size: 0.875rem; color: var(--color-gray-600);">
+                    Or explore our <a href="services.html" style="color: var(--color-primary);">services</a>, 
+                    <a href="portfolio.html" style="color: var(--color-primary);">portfolio</a>, or 
+                    <a href="contact.html" style="color: var(--color-primary);">contact</a> page.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">Creati<span>vo</span></a>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="documentation.html">Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Creativo Digital Agency. All rights reserved. A premium HTML template.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- 404 Page Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create 404 animation timeline
+            const errorTl = gsap.timeline();
+            
+            // Animate the error graphic
+            errorTl.to('#errorAnim', {
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out"
+            })
+            .to('#errorAnim .error-circle', {
+                rotation: 360,
+                duration: 1.5,
+                ease: "power2.inOut"
+            }, "-=0.5")
+            .fromTo('#errorNumber',
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+                "-=1"
+            )
+            .fromTo('.js-scroll',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.6, stagger: 0.2, ease: "power2.out" },
+                "-=0.5"
+            );
+            
+            // Add hover effect to home button
+            const homeBtn = document.querySelector('.btn-primary');
+            if (homeBtn) {
+                homeBtn.addEventListener('mouseenter', () => {
+                    gsap.to(homeBtn, {
+                        scale: 1.05,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+                
+                homeBtn.addEventListener('mouseleave', () => {
+                    gsap.to(homeBtn, {
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
